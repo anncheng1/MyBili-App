@@ -1,0 +1,32 @@
+{
+  "name": "Bili App – Hospital Miri NICU",
+  "short_name": "Bili App",
+  "description": "Bilirubin PT/ET threshold calculator. NICE CG98 (23-34 wks) + AAP 2022 (>=35 wks). Hospital Miri NICU.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "lang": "en"
+}
