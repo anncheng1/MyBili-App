@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="110" fill="url(#bg)"/>
+
+  <!-- Blood drop -->
+  <path d="M256,52
+           C256,52 138,186 138,278
+           C138,346 191,396 256,396
+           C321,396 374,346 374,278
+           C374,186 256,52 256,52 Z"
+        fill="url(#drop)" filter="url(#glow)"/>
+
+  <!-- Shine -->
+  <ellipse cx="210" cy="230" rx="22" ry="38"
+           fill="rgba(255,255,255,0.35)"
+           transform="rotate(-20,210,230)"/>
+  <ellipse cx="228" cy="198" rx="11" ry="16"
+           fill="rgba(255,255,255,0.2)"
+           transform="rotate(-20,228,198)"/>
+
+  <!-- Text -->
+  <text x="256" y="470"
+        text-anchor="middle"
+        font-family="'Trebuchet MS', sans-serif"
+        font-size="52"
+        font-weight="900"
+        letter-spacing="4"
+        fill="#ffffff">BILI APP</text>
+</svg>
