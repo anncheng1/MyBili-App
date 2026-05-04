@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="192" height="192" rx="42" fill="url(#bg)"/>
+  <!-- Yellow droplet shape -->
+  <ellipse cx="96" cy="88" rx="36" ry="44" fill="#fbbf24" opacity="0.95"/>
+  <polygon points="96,52 78,80 114,80" fill="#fbbf24" opacity="0.95"/>
+  <!-- Inner shine -->
+  <ellipse cx="84" cy="72" rx="10" ry="14" fill="rgba(255,255,255,0.25)" transform="rotate(-15,84,72)"/>
+  <!-- Text -->
+  <text x="96" y="153" text-anchor="middle"
+    font-family="'Trebuchet MS', sans-serif" font-size="22" font-weight="900"
+    letter-spacing="1" fill="#ffffff">BILI</text>
+  <text x="96" y="173" text-anchor="middle"
+    font-family="'Trebuchet MS', sans-serif" font-size="14" font-weight="900"
+    letter-spacing="2" fill="#fbbf24">APP</text>
+</svg>
