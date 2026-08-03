@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Bili App"/>
+<meta name="theme-color" content="#0f172a"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<title>Bili App · Hospital Miri NICU</title>
+<style>
+/* ── Reset & Base ─────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{font-size:16px;height:100%}
+body{font-family:'Trebuchet MS','Gill Sans',sans-serif;background:#f1f5f9;color:#0f172a;min-height:100vh;padding-bottom:max(48px,env(safe-area-inset-bottom) + 20px)}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+button{-webkit-appearance:none;font-family:inherit;cursor:pointer}
+
+/* ── Colour tokens ────────────────────────────── */
+:root{
+  /* AAP = slate/blue */
+  --aap:#1d4ed8;--aap-dark:#1e3a8a;--aap-light:#dbeafe;--aap-mid:#3b82f6;
+  /* NICE = emerald */
+  --nice:#047857;--nice-dark:#064e3b;--nice-light:#d1fae5;--nice-mid:#10b981;
+  /* Danger */
+  --et:#dc2626;--et-light:#fef2f2;
+  --pt:#d97706;--pt-light:#fffbeb;
+  --ok:#16a34a;--ok-light:#f0fdf4;
+  /* Neutral */
+  --s50:#f8fafc;--s100:#f1f5f9;--s200:#e2e8f0;--s300:#cbd5e1;
+  --s500:#64748b;--s700:#334155;--s900:#0f172a;
+}
+
+/* ── Layout ───────────────────────────────────── */
+.wrap{max-width:480px;margin:0 auto;padding:0 14px}
+
+/* ── Header ───────────────────────────────────── */
+header{
+  padding:max(16px,env(safe-area-inset-top)) 18px 14px;
+  background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);
+  position:relative;overflow:hidden;
+}
+header.mode-nice{background:linear-gradient(135deg,#064e3b 0%,#047857 100%)}
+header::after{
+  content:'';position:absolute;bottom:-30px;right:-20px;
+  width:120px;height:120px;border-radius:50%;
+  background:rgba(255,255,255,0.05);
+}
+.hdr-eyebrow{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:8px;font-family:monospace}
+.hdr-title{font-size:26px;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1}
+.hdr-title span{color:#fbbf24}
+.hdr-sub{font-size:11px;color:rgba(255,255,255,0.6);margin-top:4px}
+.mode-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:12px;padding:5px 12px;
+  border-radius:20px;font-size:11px;font-weight:800;
+  font-family:monospace;letter-spacing:.05em;
+  background:rgba(255,255,255,0.12);color:#fff;
+  border:1px solid rgba(255,255,255,0.2);
+}
+.mode-dot{width:7px;height:7px;border-radius:50%;background:#fbbf24}
+header.mode-nice .mode-dot{background:#6ee7b7}
+
+/* ── Card ─────────────────────────────────────── */
+.card{
+  background:#fff;border-radius:16px;padding:16px 14px;
+  margin-top:12px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.04);
+}
+.card-title{
+  font-size:9px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--s500);margin-bottom:14px;font-family:monospace;
+}
+
+/* ── Tab bar ──────────────────────────────────── */
+.tabbar-wrap{
+  position:sticky;top:0;z-index:50;background:#f1f5f9;
+  padding:10px 14px 8px;
+}
+.tabbar{
+  display:flex;background:var(--s200);border-radius:12px;padding:3px;
+  max-width:480px;margin:0 auto;
+}
+.tab-btn{
+  flex:1;padding:9px 0;border:none;background:transparent;border-radius:9px;
+  font-size:13px;font-weight:800;color:var(--s500);transition:all .15s;
+}
+.tab-btn.active{background:#fff;color:var(--s900);box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.tab-btn:active{transform:scale(.97)}
+
+/* ── GA Section ───────────────────────────────── */
+.ga-stepper{display:flex;align-items:center;gap:0;margin-bottom:16px}
+.step-btn{
+  width:48px;height:56px;border:2px solid var(--s200);background:var(--s50);
+  font-size:26px;font-weight:300;color:var(--s700);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .1s;
+}
+.step-btn:first-child{border-radius:12px 0 0 12px;border-right:none}
+.step-btn:last-child{border-radius:0 12px 12px 0;border-left:none}
+.step-btn:active{background:var(--s200)}
+.ga-display{
+  flex:1;height:56px;border:2px solid var(--s200);background:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.ga-number{
+  font-size:28px;font-weight:900;color:var(--aap);line-height:1;
+  width:100%;text-align:center;border:none;background:transparent;
+  outline:none;padding:0;transition:color .3s;
+}
+.ga-number.nice{color:var(--nice)}
+.ga-wk{font-size:10px;color:var(--s500);margin-top:1px;font-weight:600}
+
+/* ── GA Grid ──────────────────────────────────── */
+.ga-section-label{
+  font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  font-family:monospace;margin-bottom:8px;padding:6px 0 2px;
+}
+.ga-section-label.lbl-nice{color:var(--nice)}
+.ga-section-label.lbl-aap{color:var(--aap);margin-top:10px}
+.ga-grid{display:grid;gap:6px}
+.ga-grid.nice-grid{grid-template-columns:repeat(6,1fr)}
+.ga-grid.aap-grid{grid-template-columns:repeat(4,1fr)}
+.ga-btn{
+  padding:8px 4px;border-radius:8px;border:1.5px solid var(--s200);
+  background:var(--s50);font-size:12px;font-weight:700;color:var(--s700);
+  text-align:center;transition:all .15s;
+}
+.ga-btn:active{transform:scale(.95)}
+.ga-btn.active-aap{background:var(--aap);border-color:var(--aap);color:#fff}
+.ga-btn.active-nice{background:var(--nice);border-color:var(--nice);color:#fff}
+
+/* ── Risk Toggle ──────────────────────────────── */
+.risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.risk-btn{
+  padding:12px 8px;border-radius:10px;border:2px solid var(--s200);
+  background:var(--s50);font-size:12px;font-weight:700;color:var(--s500);
+  text-align:center;line-height:1.4;transition:all .18s;
+}
+.risk-btn.sel-safe{border-color:var(--ok);background:var(--ok-light);color:#15803d}
+.risk-btn.sel-risk{border-color:var(--et);background:var(--et-light);color:var(--et)}
+
+/* ── DateTime ─────────────────────────────────── */
+.dt-label{font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  font-family:monospace;color:var(--s500);display:block;margin-bottom:6px}
+.dt-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.dt-inp{
+  padding:12px 8px;border:1.5px solid var(--s200);border-radius:10px;
+  font-size:16px;font-family:inherit;color:var(--s900);background:var(--s50);outline:none;
+  width:100%;transition:border-color .15s;
+}
+.dt-inp:focus,.dt-inp.has-val{border-color:var(--aap);background:#fff}
+.dt-inp.has-val.nice{border-color:var(--nice)}
+
+.hol-box{
+  background:var(--aap);color:#fff;border-radius:12px;
+  padding:14px 16px;display:flex;align-items:center;gap:12px;
+  transition:background .3s;
+}
+.hol-box.nice{background:var(--nice)}
+.hol-box.empty{background:var(--s200);color:var(--s500)}
+.hol-big{font-size:38px;font-weight:900;line-height:1}
+.hol-lbl{font-size:12px;opacity:.8;margin-top:2px}
+.hol-sub{font-size:10px;opacity:.6;margin-top:3px;font-family:monospace}
+.hol-err{
+  margin-top:8px;padding:10px 12px;border-radius:8px;font-size:12px;
+  background:var(--et-light);color:var(--et);border:1.5px solid #fecaca;
+  display:none;
+}
+.hol-err.show{display:block}
+
+/* ── Unit Toggle ──────────────────────────────── */
+.unit-row{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.unit-btn{
+  padding:5px 14px;border-radius:20px;border:1.5px solid var(--s200);
+  background:#fff;font-family:monospace;font-size:12px;font-weight:800;
+  color:var(--s500);transition:all .15s;
+}
+.unit-btn.on-aap{border-color:var(--aap);background:var(--aap);color:#fff}
+.unit-btn.on-nice{border-color:var(--nice);background:var(--nice);color:#fff}
+
+/* ── Result ───────────────────────────────────── */
+.thresh-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.thresh-box{border-radius:12px;padding:16px 12px;text-align:center}
+.thresh-box.pt-aap{background:var(--pt-light);border:2px solid #fde68a}
+.thresh-box.pt-nice{background:var(--nice-light);border:2px solid #6ee7b7}
+.thresh-box.et-box{background:var(--et-light);border:2px solid #fecaca}
+.t-label{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  font-family:monospace;margin-bottom:8px}
+.thresh-box.pt-aap .t-label{color:var(--pt)}
+.thresh-box.pt-nice .t-label{color:var(--nice)}
+.thresh-box.et-box .t-label{color:var(--et)}
+.t-val{font-size:32px;font-weight:900;line-height:1}
+.thresh-box.pt-aap .t-val{color:var(--pt)}
+.thresh-box.pt-nice .t-val{color:var(--nice)}
+.thresh-box.et-box .t-val{color:var(--et)}
+.t-unit{font-size:11px;opacity:.7;margin-top:3px}
+.t-alt{font-size:11px;color:var(--s500);margin-top:6px}
+
+.divider{height:1.5px;background:var(--s100);margin:16px 0}
+
+.tsb-label{font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  font-family:monospace;color:var(--s500);margin-bottom:10px}
+.tsb-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.tsb-inp{
+  width:120px;font-size:26px;font-weight:900;color:var(--aap);
+  border:none;border-bottom:3px solid var(--aap);background:transparent;
+  outline:none;padding:2px 0;transition:color .3s,border-color .3s;font-family:inherit;
+}
+.tsb-inp.nice{color:var(--nice);border-bottom-color:var(--nice)}
+.badge{display:inline-flex;align-items:center;gap:5px;
+  padding:5px 12px;border-radius:20px;font-size:12px;font-weight:800}
+.badge.ok{background:var(--ok-light);color:var(--ok);border:1.5px solid #bbf7d0}
+.badge.pt{background:var(--pt-light);color:var(--pt);border:1.5px solid #fde68a}
+.badge.et{background:var(--et-light);color:var(--et);border:1.5px solid #fecaca}
+
+/* gauge */
+.gauge{margin:4px 0 6px}
+.gauge-track{height:12px;border-radius:8px;background:var(--s200);position:relative;overflow:visible}
+.gauge-fill{height:100%;border-radius:8px;position:absolute;top:0;left:0;transition:width .4s}
+.gauge-pin{position:absolute;top:-5px;width:3px;height:22px;border-radius:2px;transform:translateX(-50%)}
+.gauge-lbl{display:flex;justify-content:space-between;font-size:9px;font-family:monospace;
+  font-weight:800;margin-top:4px}
+
+/* ── Reference Table ──────────────────────────── */
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{padding:8px 6px;font-size:9px;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;text-align:center;font-family:monospace}
+.ref-table th:first-child{background:var(--aap-dark);color:#fff;border-radius:8px 0 0 0}
+.ref-table th:first-child.nc{background:var(--nice-dark)}
+.ref-table th:nth-child(2){background:#92400e;color:#fff}
+.ref-table th:last-child{background:var(--et);color:#fff;border-radius:0 8px 0 0}
+.ref-table td{padding:9px 6px;text-align:center;border-bottom:1px solid var(--s100)}
+.ref-table tr.hi td{background:var(--aap-light);font-weight:800}
+.ref-table tr.hi.nc td{background:var(--nice-light)}
+.ref-table tr.hi td:first-child{color:var(--aap-dark);font-weight:900}
+.ref-table tr.hi.nc td:first-child{color:var(--nice-dark);font-weight:900}
+.ref-table td:nth-child(2){color:#92400e}
+.ref-table td:last-child{color:var(--et)}
+
+/* ── Notes ────────────────────────────────────── */
+.note{border-radius:10px;padding:12px 14px;margin-top:12px;font-size:12px;line-height:1.6}
+.note strong{font-weight:800}
+.note-g{background:var(--ok-light);border:1.5px solid #86efac;color:#14532d}
+.note-a{background:var(--pt-light);border:1.5px solid #fde68a;color:#78350f}
+.note-r{background:var(--et-light);border:1.5px solid #fca5a5;color:#7f1d1d}
+.note-n{background:var(--nice-light);border:1.5px solid #6ee7b7;color:var(--nice-dark)}
+
+.footer{text-align:center;font-size:11px;color:var(--s500);margin-top:24px;
+  font-style:italic;line-height:1.6;padding:0 14px}
+
+/* ── Install Banner ───────────────────────────── */
+#install-banner{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:#0f172a;color:#fff;
+  padding:14px 18px;align-items:center;justify-content:space-between;gap:10px;
+  box-shadow:0 -4px 24px rgba(0,0,0,.3);
+}
+#install-banner.show{display:flex}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-eyebrow">Hospital Miri NICU · Neonatology</div>
+  <div class="hdr-title">Bili<span>App</span></div>
+  <div class="hdr-sub">Bilirubin threshold calculator · NICE + AAP</div>
+  <div class="mode-pill"><span class="mode-dot"></span><span id="mode-text">AAP 2022 (Malaysian-adapted) · ≥35 weeks</span></div>
+</header>
+
+<div class="tabbar-wrap">
+  <div class="tabbar">
+    <button class="tab-btn active" id="tab-calc-btn" onclick="showTab('calc')">Calculator</button>
+    <button class="tab-btn" id="tab-ref-btn" onclick="showTab('ref')">Reference</button>
+  </div>
+</div>
+
+<div class="wrap">
+<div id="tab-calc">
+
+<!-- ══════════════════════════════════════════
+     GESTATIONAL AGE
+════════════════════════════════════════════ -->
+<div class="card">
+  <div class="card-title">Step 1 — Gestational Age</div>
+
+  <!-- Stepper -->
+  <div class="ga-stepper">
+    <button class="step-btn" id="ga-minus">−</button>
+    <div class="ga-display">
+      <input type="number" id="ga-input" class="ga-number"
+        min="23" max="38" value="38" autocomplete="off"/>
+      <div class="ga-wk">weeks</div>
+    </div>
+    <button class="step-btn" id="ga-plus">+</button>
+  </div>
+
+  <!-- NICE buttons: 23–34 -->
+  <div class="ga-section-label lbl-nice">● NICE CG98 — Preterm &lt;35 weeks</div>
+  <div class="ga-grid nice-grid" id="nice-btns"></div>
+
+  <!-- AAP buttons: 35–38 -->
+  <div class="ga-section-label lbl-aap">● AAP 2022 — Late Preterm / Term ≥35 weeks</div>
+  <div class="ga-grid aap-grid" id="aap-btns"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     RISK FACTORS (AAP only)
+════════════════════════════════════════════ -->
+<div class="card" id="risk-card">
+  <div class="card-title">Step 2 — Neurotoxicity Risk Factors</div>
+  <div class="risk-grid">
+    <button class="risk-btn sel-safe" id="btn-safe" onclick="setRisk('none')">
+      🟢<br/>No Risk Factors
+    </button>
+    <button class="risk-btn" id="btn-risk" onclick="setRisk('risk')">
+      🔴<br/>ANY Risk Factor
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     AGE — AUTO-CALCULATED FROM DATE & TIME OF BIRTH
+════════════════════════════════════════════ -->
+<div class="card">
+  <div class="card-title">Step 3 — Date &amp; Time of Birth</div>
+
+  <span class="dt-label">🍼 Date &amp; time of birth</span>
+  <div class="dt-row">
+    <input class="dt-inp" type="date" id="dob-date"/>
+    <input class="dt-inp" type="time" id="dob-time"/>
+  </div>
+
+  <span class="dt-label">🩸 Date &amp; time of blood sample</span>
+  <div class="dt-row">
+    <input class="dt-inp" type="date" id="smp-date"/>
+    <input class="dt-inp" type="time" id="smp-time"/>
+  </div>
+
+  <div class="hol-box empty" id="hol-box">
+    <div>
+      <div class="hol-big" id="hol-num">—</div>
+      <div class="hol-lbl">hours of life</div>
+      <div class="hol-sub" id="hol-sub">Enter date &amp; time of birth above</div>
+    </div>
+  </div>
+  <div class="hol-err" id="hol-err"></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     UNIT
+════════════════════════════════════════════ -->
+<div class="unit-row">
+  <button class="unit-btn" id="u-mg"   onclick="setUnit('mg')">mg/dL</button>
+  <button class="unit-btn" id="u-umol" onclick="setUnit('umol')">µmol/L</button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     RESULT
+════════════════════════════════════════════ -->
+<div class="card">
+  <div class="card-title" id="res-title">Thresholds</div>
+  <div class="thresh-row">
+    <div class="thresh-box pt-aap" id="pt-box">
+      <div class="t-label">Phototherapy (PT)</div>
+      <div class="t-val" id="pt-val">—</div>
+      <div class="t-unit" id="pt-unit"></div>
+      <div class="t-alt"  id="pt-alt"></div>
+    </div>
+    <div class="thresh-box et-box">
+      <div class="t-label">Exchange Transfusion (ET)</div>
+      <div class="t-val" id="et-val">—</div>
+      <div class="t-unit" id="et-unit"></div>
+      <div class="t-alt"  id="et-alt"></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="tsb-label" id="tsb-label">Enter patient TSB (mg/dL)</div>
+  <div class="tsb-row">
+    <input type="number" id="tsb-inp" class="tsb-inp"
+      min="0" step="0.1" placeholder="e.g. 12.5" autocomplete="off"/>
+    <span id="tsb-badge"></span>
+  </div>
+  <div class="gauge" id="gauge" style="display:none">
+    <div class="gauge-track">
+      <div class="gauge-fill" id="g-fill"></div>
+      <div class="gauge-pin" id="g-pt-pin" style="background:#d97706"></div>
+      <div class="gauge-pin" id="g-et-pin" style="background:#dc2626"></div>
+    </div>
+    <div class="gauge-lbl">
+      <span style="color:var(--s500)">0</span>
+      <span style="color:var(--pt)" id="g-pt-lbl"></span>
+      <span style="color:var(--et)" id="g-et-lbl"></span>
+      <span style="color:var(--s500)" id="g-max-lbl"></span>
+    </div>
+  </div>
+</div>
+
+<!-- NOTES -->
+<div class="note note-g" style="margin-top:14px">
+  <strong>Intensive PT:</strong> Start when TSB is 3 mg/dL (51 µmol/L) above PT threshold,
+  or if TSB rising &gt;0.5 mg/dL/hr (8.5 µmol/L/hr).
+</div>
+<div class="note note-a">
+  <strong>ET indications:</strong> TSB ≥ ET threshold · Signs of moderate or advanced ABE ·
+  TSB above ET threshold (use whichever is higher).
+</div>
+<div class="note note-r" id="note-risk" style="display:none">
+  <strong>Neurotoxicity Risk Factors:</strong> Isoimmune haemolytic disease · G6PD deficiency ·
+  Other haemolytic conditions · Sepsis · Significant clinical instability past 24h · Albumin &lt;30 g/L.
+</div>
+<div class="note note-n" id="note-nice" style="display:none">
+  <strong>NICE CG98 preterm (&lt;35 wks):</strong> Values follow the official reference table
+  (Phototherapy 40 µmol/L / Exchange 80 µmol/L at birth for every gestation, rising to a plateau
+  at 72 hours of Exchange = gestational age (weeks) × 10 µmol/L, Phototherapy = Exchange − 100
+  µmol/L). Hours between 0–72h are linear interpolation, matching how the table's own 24h/48h
+  columns are derived and rounded. Perform ET regardless of TSB if there are clinical signs of
+  acute bilirubin encephalopathy.
+</div>
+</div><!-- /tab-calc -->
+
+<!-- ══════════════════════════════════════════
+     REFERENCE TAB
+════════════════════════════════════════════ -->
+<div id="tab-ref" style="display:none">
+  <div class="card">
+    <div class="card-title" id="tbl-title">Reference Table</div>
+    <div style="overflow-x:auto">
+      <table class="ref-table">
+        <thead><tr>
+          <th id="th0">Age (h)</th>
+          <th id="th1">PT</th>
+          <th id="th2">ET</th>
+        </tr></thead>
+        <tbody id="tbl-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div><!-- /tab-ref -->
+
+<div class="footer">
+  NICE CG98 (72h+ plateau formula) · 23–34 weeks &nbsp;|&nbsp; AAP 2022 (Malaysian-adapted) · ≥35 weeks<br>
+  Hospital Miri NICU · Clinical decision support only<br>
+  Always verify with senior clinician
+</div>
+</div><!-- /wrap -->
+
+<!-- INSTALL BANNER -->
+<div id="install-banner">
+  <div>
+    <div style="font-weight:900;font-size:15px">Add Bili App to Home Screen</div>
+    <div style="font-size:12px;opacity:.7;margin-top:2px">Offline · No internet needed at bedside</div>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button id="btn-dismiss"
+      style="padding:8px 14px;border-radius:20px;border:1.5px solid rgba(255,255,255,.3);
+      background:transparent;color:#fff;font-size:13px;font-weight:700">Later</button>
+    <button id="btn-install"
+      style="padding:8px 16px;border-radius:20px;border:none;
+      background:#fbbf24;color:#0f172a;font-size:13px;font-weight:900">Install</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+═════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── DATA: AAP 2022 (≥35 wks, mg/dL + µmol/L) ─────────────────────────── */
+const AAP = {
+  none: { label:'No Risk Factors', rows:[
+    {h:6,  g38:{pt:[5.9,101],et:[18.8,321]},g37:{pt:[5.5,94], et:[17.8,304]},g36:{pt:[4.9,84], et:[16.7,285]},g35:{pt:[3.4,58], et:[15.6,266]}},
+    {h:12, g38:{pt:[7.1,121],et:[19.7,337]},g37:{pt:[6.6,113],et:[18.7,320]},g36:{pt:[6.0,103],et:[17.5,299]},g35:{pt:[5.5,94], et:[16.4,280]}},
+    {h:24, g38:{pt:[9.3,159],et:[21.4,366]},g37:{pt:[8.7,149],et:[20.3,347]},g36:{pt:[8.2,140],et:[19.1,327]},g35:{pt:[7.6,130],et:[17.9,306]}},
+    {h:48, g38:{pt:[13.0,222],et:[24.0,410]},g37:{pt:[12.4,212],et:[23.1,395]},g36:{pt:[11.8,202],et:[21.9,374]},g35:{pt:[11.2,191],et:[20.7,354]}},
+    {h:72, g38:{pt:[15.8,270],et:[25.9,443]},g37:{pt:[15.1,258],et:[25.2,431]},g36:{pt:[14.5,248],et:[24.1,412]},g35:{pt:[13.8,236],et:[22.9,391]}},
+    {h:96, g38:{pt:[17.7,303],et:[27.0,462]},g37:{pt:[17.0,291],et:[26.6,455]},g36:{pt:[16.3,279],et:[25.5,436]},g35:{pt:[15.6,267],et:[24.5,419]}},
+    {h:120,g38:{pt:[17.9,306],et:[27.0,462]},g37:{pt:[17.2,294],et:[26.7,456]},g36:{pt:[16.4,280],et:[25.7,439]},g35:{pt:[15.7,268],et:[24.7,422]}},
+  ]},
+  risk: { label:'ANY Risk Factor', rows:[
+    {h:6,  g38:{pt:[4.3,74], et:[15.5,265]},g37:{pt:[3.9,67], et:[15.0,256]},g36:{pt:[3.3,56], et:[14.4,246]},g35:{pt:[2.8,48], et:[13.8,236]}},
+    {h:12, g38:{pt:[5.5,94], et:[16.3,279]},g37:{pt:[5.0,85], et:[15.7,268]},g36:{pt:[4.4,75], et:[15.2,260]},g35:{pt:[3.9,67], et:[14.6,250]}},
+    {h:24, g38:{pt:[7.5,128],et:[17.7,303]},g37:{pt:[7.0,120],et:[17.2,294]},g36:{pt:[6.4,109],et:[16.6,284]},g35:{pt:[5.9,101],et:[16.1,275]}},
+    {h:48, g38:{pt:[11.0,188],et:[20.1,344]},g37:{pt:[10.5,180],et:[19.7,337]},g36:{pt:[9.8,167],et:[19.1,327]},g35:{pt:[9.2,157],et:[18.5,316]}},
+    {h:72, g38:{pt:[13.6,232],et:[22.1,378]},g37:{pt:[13.1,224],et:[21.7,371]},g36:{pt:[12.4,212],et:[20.9,357]},g35:{pt:[11.6,198],et:[20.1,344]}},
+    {h:96, g38:{pt:[15.2,260],et:[23.5,402]},g37:{pt:[14.9,255],et:[23.1,395]},g36:{pt:[14.0,239],et:[22.1,378]},g35:{pt:[13.1,224],et:[21.1,361]}},
+    {h:120,g38:{pt:[15.2,260],et:[23.5,402]},g37:{pt:[15.0,256],et:[23.2,397]},g36:{pt:[14.1,241],et:[22.3,381]},g35:{pt:[13.3,227],et:[21.3,364]}},
+  ]}
+};
+
+/* ── DATA: NICE CG98 preterm (<35 wks) ────────────────────────────────── */
+/* Values per the hospital's official NICE CG98-derived reference table    */
+/* (Phototherapy / Exchange Transfusion, in µmol/L, by gestation 23–34wks):*/
+/*   • 0h and 72h are the exact anchor values for every gestational age.   */
+/*   • 24h and 48h are the straight-line interpolation between 0h and 72h, */
+/*     rounded to the nearest whole number for practical clinical use.     */
+/*   • At birth (0h): Phototherapy = 40 µmol/L, Exchange = 80 µmol/L for   */
+/*     every gestational age 23–34 weeks.                                  */
+/*   • At 72h (plateau, held flat thereafter):                             */
+/*       Exchange transfusion = GA(weeks) × 10 µmol/L                      */
+/*       Phototherapy       = (GA(weeks) × 10) − 100 µmol/L                */
+/* Intermediate hours not on the reference table (6/12/18/30/36/42/54/60/  */
+/* 66h) are linearly interpolated the same way, straight from the 0h to    */
+/* the 72h anchor — consistent with how the table's own 24h/48h columns    */
+/* were derived.                                                           */
+function makeNICEcurve(ga) {
+  const etP = ga * 10;           // ET plateau (≥72h) — table-confirmed anchor
+  const ptP = ga * 10 - 100;     // PT plateau (≥72h) — table-confirmed anchor
+  const pt0 = 40, et0 = 80;      // birth (0h) values — table-confirmed anchor
+  const hrs = [0,6,12,18,24,30,36,42,48,54,60,66,72,96,168,336];
+  return hrs.map(h => {
+    if (h >= 72) return [h, ptP, etP];
+    const f = h / 72;
+    return [h, Math.round(pt0 + f*(ptP-pt0)), Math.round(et0 + f*(etP-et0))];
+  });
+}
+const NICE = {};
+for (let ga = 23; ga <= 34; ga++) {
+  NICE[ga] = makeNICEcurve(ga);
+}
+
+/* ── STATE ─────────────────────────────────────────────────────────────── */
+const S = { ga:38, risk:'none', age:24, unit:'mg', tsb:'' };
+let holVal = null;
+
+/* ── HELPERS ───────────────────────────────────────────────────────────── */
+const isNICE = () => S.ga <= 34;
+
+function aapKey(ga) {
+  if (ga >= 38) return 'g38';
+  if (ga === 37) return 'g37';
+  if (ga === 36) return 'g36';
+  return 'g35';
+}
+
+function lerpNICE(ga, age) {
+  const rows = NICE[ga];
+  const hs = rows.map(r => r[0]);
+  if (age <= hs[0])           return { pt:rows[0][1], et:rows[0][2] };
+  if (age >= hs[hs.length-1]) return { pt:rows[hs.length-1][1], et:rows[hs.length-1][2] };
+  let lo=0, hi=1;
+  for (let i=0; i<hs.length-1; i++) {
+    if (age >= hs[i] && age <= hs[i+1]) { lo=i; hi=i+1; break; }
+  }
+  const f = (age - hs[lo]) / (hs[hi] - hs[lo]);
+  return {
+    pt: Math.round(rows[lo][1] + f*(rows[hi][1]-rows[lo][1])),
+    et: Math.round(rows[lo][2] + f*(rows[hi][2]-rows[lo][2]))
+  };
+}
+
+function lerpAAP(rows, age, gk) {
+  const hs = rows.map(r => r.h);
+  if (age <= hs[0])                 return rows[0][gk];
+  if (age >= hs[hs.length-1])       return rows[hs.length-1][gk];
+  let lo=0, hi=1;
+  for (let i=0; i<hs.length-1; i++) {
+    if (age >= hs[i] && age <= hs[i+1]) { lo=i; hi=i+1; break; }
+  }
+  const f = (age - hs[lo]) / (hs[hi] - hs[lo]);
+  const L = rows[lo][gk], H = rows[hi][gk];
+  return {
+    pt: [+(L.pt[0]+f*(H.pt[0]-L.pt[0])).toFixed(1), Math.round(L.pt[1]+f*(H.pt[1]-L.pt[1]))],
+    et: [+(L.et[0]+f*(H.et[0]-L.et[0])).toFixed(1), Math.round(L.et[1]+f*(H.et[1]-L.et[1]))]
+  };
+}
+
+/* ── RENDER ─────────────────────────────────────────────────────────────── */
+function render() {
+  const { ga, risk, age, unit, tsb } = S;
+  const nice = isNICE();
+  const ul = unit === 'mg' ? 'mg/dL' : 'µmol/L';
+
+  /* header */
+  document.getElementById('hdr').className = nice ? 'mode-nice' : '';
+  document.getElementById('mode-text').textContent = nice
+    ? `NICE CG98 · ${ga} weeks`
+    : `AAP 2022 · ${ga >= 38 ? '≥38' : ga} weeks`;
+
+  /* GA input colour */
+  document.getElementById('ga-input').className = 'ga-number' + (nice ? ' nice' : '');
+
+  /* GA buttons */
+  document.querySelectorAll('.ga-btn').forEach(btn => {
+    const g = parseInt(btn.dataset.ga);
+    const isActive = g === ga;
+    btn.className = 'ga-btn' + (isActive ? (g <= 34 ? ' active-nice' : ' active-aap') : '');
+  });
+
+  /* risk card */
+  document.getElementById('risk-card').style.display = nice ? 'none' : 'block';
+
+  /* unit buttons */
+  document.getElementById('u-mg').className   = 'unit-btn' + (unit==='mg'   ? (nice?' on-nice':' on-aap') : '');
+  document.getElementById('u-umol').className = 'unit-btn' + (unit==='umol' ? (nice?' on-nice':' on-aap') : '');
+
+  /* thresholds */
+  let ptNum, etNum, ptText, etText, ptAlt, etAlt;
+  if (nice) {
+    const r = lerpNICE(ga, age);
+    const ptU = r.pt, etU = r.et;
+    const ptMg = +(ptU / 17.1).toFixed(1), etMg = +(etU / 17.1).toFixed(1);
+    ptNum = unit === 'mg' ? ptMg : ptU;
+    etNum = unit === 'mg' ? etMg : etU;
+    ptText = String(ptNum);
+    etText = String(etNum);
+    ptAlt = unit === 'mg' ? `= ${ptU} µmol/L` : `= ${ptMg} mg/dL`;
+    etAlt = unit === 'mg' ? `= ${etU} µmol/L` : `= ${etMg} mg/dL`;
+  } else {
+    const r = lerpAAP(AAP[risk].rows, age, aapKey(ga));
+    const ptMg = r.pt[0], ptU = r.pt[1], etMg = r.et[0], etU = r.et[1];
+    ptNum = unit === 'mg' ? ptMg : ptU;
+    etNum = unit === 'mg' ? etMg : etU;
+    ptText = String(ptNum);
+    etText = String(etNum);
+    ptAlt = unit === 'mg' ? `= ${ptU} µmol/L` : `= ${ptMg} mg/dL`;
+    etAlt = unit === 'mg' ? `= ${etU} µmol/L` : `= ${etMg} mg/dL`;
+  }
+
+  document.getElementById('pt-box').className = 'thresh-box ' + (nice ? 'pt-nice' : 'pt-aap');
+  const rl = nice ? 'NICE CG98' : AAP[risk].label;
+  document.getElementById('res-title').textContent = `${ga} wks · ${age}h · ${rl}`;
+
+  document.getElementById('pt-val').textContent  = ptText;
+  document.getElementById('pt-unit').textContent = ul;
+  document.getElementById('pt-alt').textContent  = ptAlt;
+  document.getElementById('et-val').textContent  = etText;
+  document.getElementById('et-unit').textContent = ul;
+  document.getElementById('et-alt').textContent  = etAlt;
+  document.getElementById('tsb-label').textContent = `Enter patient TSB (${ul})`;
+  document.getElementById('tsb-inp').className = 'tsb-inp' + (nice ? ' nice' : '');
+
+  /* TSB badge + gauge */
+  const tsbN = parseFloat(tsb);
+  const badge = document.getElementById('tsb-badge');
+  const gauge = document.getElementById('gauge');
+  if (tsb !== '' && !isNaN(tsbN)) {
+    let cls, txt;
+    if (tsbN >= etNum)      { cls='badge et'; txt='⚠ ET Threshold Met'; }
+    else if (tsbN >= ptNum) { cls='badge pt'; txt='● PT Threshold Met'; }
+    else                    { cls='badge ok'; txt='✓ Below PT Threshold'; }
+    badge.className = cls;
+    badge.textContent = txt;
+    gauge.style.display = 'block';
+    const mx = unit === 'mg' ? 30 : 515;
+    const pct = v => Math.min(100, (Math.min(v,mx)/mx)*100).toFixed(1) + '%';
+    const fc = tsbN>=etNum ? '#dc2626' : tsbN>=ptNum ? '#d97706' : '#16a34a';
+    document.getElementById('g-fill').style.width    = pct(tsbN);
+    document.getElementById('g-fill').style.background = fc;
+    document.getElementById('g-pt-pin').style.left  = pct(ptNum);
+    document.getElementById('g-et-pin').style.left  = pct(etNum);
+    document.getElementById('g-pt-lbl').textContent = `PT ${ptNum}`;
+    document.getElementById('g-et-lbl').textContent = `ET ${etNum}`;
+    document.getElementById('g-max-lbl').textContent = mx;
+  } else {
+    badge.className = '';
+    badge.textContent = '';
+    gauge.style.display = 'none';
+  }
+
+  /* reference table */
+  const tblTitle = `Reference · ${ga} wks · ${rl}`;
+  document.getElementById('tbl-title').textContent = tblTitle;
+  document.getElementById('th0').className = nice ? 'nc' : '';
+  document.getElementById('th0').textContent = 'Age (h)';
+  document.getElementById('th1').textContent = unit==='mg' ? 'PT mg/dL (µmol)' : 'PT µmol (mg/dL)';
+  document.getElementById('th2').textContent = unit==='mg' ? 'ET mg/dL (µmol)' : 'ET µmol (mg/dL)';
+
+  const tbody = document.getElementById('tbl-body');
+  tbody.innerHTML = '';
+  if (nice) {
+    NICE[ga].forEach(([h, pt, et]) => {
+      const on = Math.abs(age - h) < 3;
+      const ptm = +(pt/17.1).toFixed(1), etm = +(et/17.1).toFixed(1);
+      const ptD2 = unit==='mg' ? `${ptm} (${pt})` : `${pt} (${ptm})`;
+      const etD2 = unit==='mg' ? `${etm} (${et})` : `${et} (${etm})`;
+      const tr = document.createElement('tr');
+      tr.className = on ? 'hi nc' : '';
+      tr.innerHTML = `<td>${h}${on?' ◀':''}</td><td>${ptD2}</td><td>${etD2}</td>`;
+      tbody.appendChild(tr);
+    });
+  } else {
+    AAP[risk].rows.forEach(row => {
+      const r = row[aapKey(ga)];
+      const on = Math.abs(age - row.h) < 0.5;
+      const ptD2 = unit==='mg' ? `${r.pt[0]} (${r.pt[1]})` : `${r.pt[1]} (${r.pt[0]})`;
+      const etD2 = unit==='mg' ? `${r.et[0]} (${r.et[1]})` : `${r.et[1]} (${r.et[0]})`;
+      const tr = document.createElement('tr');
+      tr.className = on ? 'hi' : '';
+      tr.innerHTML = `<td>${row.h}${on?' ◀':''}</td><td>${ptD2}</td><td>${etD2}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  /* notes */
+  document.getElementById('note-risk').style.display = (!nice && risk==='risk') ? 'block' : 'none';
+  document.getElementById('note-nice').style.display = nice ? 'block' : 'none';
+
+  /* hol box colour */
+  const hb = document.getElementById('hol-box');
+  hb.className = holVal === null ? 'hol-box empty' : 'hol-box' + (nice ? ' nice' : '');
+}
+
+/* ── CONTROLS ───────────────────────────────────────────────────────────── */
+function setGA(ga) {
+  S.ga = Math.min(Math.max(parseInt(ga) || 38, 23), 38);
+  document.getElementById('ga-input').value = S.ga;
+  /* auto-switch to µmol for NICE */
+  if (isNICE() && S.unit === 'mg') {
+    S.unit = 'umol';
+    S.tsb = '';
+    document.getElementById('tsb-inp').value = '';
+  }
+  render();
+}
+
+document.getElementById('ga-minus').addEventListener('click', () => setGA(S.ga - 1));
+document.getElementById('ga-plus').addEventListener('click',  () => setGA(S.ga + 1));
+document.getElementById('ga-input').addEventListener('input', e => {
+  const n = parseInt(e.target.value);
+  if (n >= 23 && n <= 38) setGA(n);
+});
+document.getElementById('ga-input').addEventListener('change', e => {
+  const n = parseInt(e.target.value);
+  if (!isNaN(n)) setGA(Math.min(Math.max(n,23),38));
+});
+
+function setRisk(v) {
+  S.risk = v;
+  document.getElementById('btn-safe').className = 'risk-btn' + (v==='none' ? ' sel-safe' : '');
+  document.getElementById('btn-risk').className = 'risk-btn' + (v==='risk' ? ' sel-risk' : '');
+  render();
+}
+
+function setUnit(v) {
+  S.unit = v;
+  S.tsb = '';
+  document.getElementById('tsb-inp').value = '';
+  render();
+}
+
+document.getElementById('tsb-inp').addEventListener('input', e => {
+  S.tsb = e.target.value; render();
+});
+
+/* ── DATETIME CALCULATOR (sole source of age) ──────────────────────────── */
+function prefillSampleNow() {
+  const now = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  const sd = document.getElementById('smp-date');
+  const st = document.getElementById('smp-time');
+  if (!sd.value) sd.value = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}`;
+  if (!st.value) st.value = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
+}
+
+['dob-date','dob-time','smp-date','smp-time'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calcHOL);
+  document.getElementById(id).addEventListener('change', calcHOL);
+});
+
+function calcHOL() {
+  const dd = document.getElementById('dob-date').value;
+  const dt = document.getElementById('dob-time').value;
+  const sd = document.getElementById('smp-date').value;
+  const st = document.getElementById('smp-time').value;
+
+  ['dob-date','dob-time','smp-date','smp-time'].forEach(id => {
+    const el = document.getElementById(id);
+    el.className = 'dt-inp' + (el.value ? (isNICE() ? ' has-val nice' : ' has-val') : '');
+  });
+
+  const hb = document.getElementById('hol-box');
+  const he = document.getElementById('hol-err');
+  he.className = 'hol-err';
+
+  if (!dd || !dt || !sd || !st) {
+    hb.className = 'hol-box empty';
+    document.getElementById('hol-num').textContent = '—';
+    document.getElementById('hol-sub').textContent = 'Enter date & time of birth above';
+    holVal = null;
+    return;
+  }
+
+  const dob = new Date(`${dd}T${dt}:00`);
+  const smp = new Date(`${sd}T${st}:00`);
+
+  if (isNaN(dob) || isNaN(smp)) {
+    hb.className = 'hol-box empty';
+    he.textContent = 'Invalid date or time entered.';
+    he.className = 'hol-err show'; holVal = null; return;
+  }
+  if (smp <= dob) {
+    hb.className = 'hol-box empty';
+    he.textContent = 'Sample time must be after time of birth.';
+    he.className = 'hol-err show'; holVal = null; return;
+  }
+
+  const ms   = smp - dob;
+  const mins = Math.floor(ms / 60000);
+  holVal     = Math.round(ms / 3600000 * 10) / 10;
+
+  const d = Math.floor(mins / 1440);
+  const h = Math.floor((mins % 1440) / 60);
+  const m = mins % 60;
+  let bk = ''; if (d) bk += d+'d '; bk += h+'h '+m+'m';
+
+  document.getElementById('hol-num').textContent = holVal;
+  document.getElementById('hol-sub').textContent = bk;
+  hb.className = 'hol-box' + (isNICE() ? ' nice' : '');
+
+  /* auto-apply: age is derived solely from birth/sample date-time */
+  S.age = Math.min(Math.max(holVal, 0.1), 336);
+  render();
+}
+
+/* ── TAB SWITCHING ──────────────────────────────────────────────────────── */
+function showTab(tab) {
+  document.getElementById('tab-calc').style.display = tab === 'calc' ? 'block' : 'none';
+  document.getElementById('tab-ref').style.display  = tab === 'ref'  ? 'block' : 'none';
+  document.getElementById('tab-calc-btn').className = 'tab-btn' + (tab === 'calc' ? ' active' : '');
+  document.getElementById('tab-ref-btn').className  = 'tab-btn' + (tab === 'ref'  ? ' active' : '');
+  if (tab === 'ref') window.scrollTo({top:0});
+}
+
+/* ── BUILD GA BUTTONS ───────────────────────────────────────────────────── */
+function buildGAButtons() {
+  const niceContainer = document.getElementById('nice-btns');
+  const aapContainer  = document.getElementById('aap-btns');
+  niceContainer.innerHTML = '';
+  aapContainer.innerHTML  = '';
+
+  for (let ga = 23; ga <= 34; ga++) {
+    const btn = document.createElement('button');
+    btn.className   = 'ga-btn';
+    btn.dataset.ga  = ga;
+    btn.textContent = ga + 'w';
+    btn.addEventListener('click', () => setGA(ga));
+    niceContainer.appendChild(btn);
+  }
+
+  [35, 36, 37, 38].forEach(ga => {
+    const btn = document.createElement('button');
+    btn.className   = 'ga-btn';
+    btn.dataset.ga  = ga;
+    btn.textContent = (ga === 38 ? '≥38' : ga) + 'w';
+    btn.addEventListener('click', () => setGA(ga));
+    aapContainer.appendChild(btn);
+  });
+}
+
+/* ── PWA ────────────────────────────────────────────────────────────────── */
+// Standalone
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('install-banner').classList.add('show');
+});
+document.getElementById('btn-install').addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    document.getElementById('install-banner').classList.remove('show');
+  }
+});
+document.getElementById('btn-dismiss').addEventListener('click', () => {
+  document.getElementById('install-banner').classList.remove('show');
+});
+
+/* ── INIT ───────────────────────────────────────────────────────────────── */
+buildGAButtons();
+prefillSampleNow();
+calcHOL();
+render();
+</script>
+</body>
+</html>
